@@ -22,6 +22,7 @@ const db = mysql.createConnection({
 });
 
 app.use(express.static(path.join(__dirname, "./assets")));
+app.use("/vendor/bootstrap", express.static(path.join("./node_modules/bootstrap/dist")));
 app.use(express.urlencoded({ extended: "false" }));
 app.use(express.json());
 
